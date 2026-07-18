@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakshi Damani | Full Stack Developer</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e293b;
+            --accent-color: #3b82f6;
+            --bg-color: #f8fafc;
+            --text-color: #334155;
+            --light-bg: #ffffff;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 60px;
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            min-height: 90vh;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-content .title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .contact-item:hover {
+            color: var(--primary-color);
+        }
+
+        .summary-box {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #1d4ed8;
+        }
+
+        /* Sections General */
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .skill-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .skill-tag {
+            background: #e0e7ff;
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid #c7d2fe;
+        }
+
+        .soft-skills .skill-tag {
+            background: #fce7f3;
+            color: #be185d;
+            border-color: #fbcfe8;
+        }
+
+        /* Timeline (Experience & Education) */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.4rem;
+            top: 2rem;
+            width: 12px;
+            height: 12px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            border: 3px solid var(--light-bg);
+            box-shadow: 0 0 0 3px var(--primary-color);
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.25rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        .timeline-company {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .timeline-date {
+            color: #64748b;
+            font-size: 0.9rem;
+            font-weight: 500;
+            background: #f1f5f9;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+        }
+
+        .timeline-content ul {
+            margin-top: 1rem;
+            padding-left: 1.2rem;
+        }
+
+        .timeline-content li {
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--light-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+            border: 1px solid var(--border-color);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, var(--primary-color), #1d4ed8);
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-date {
+            opacity: 0.9;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .project-body {
+            padding: 1.5rem;
+        }
+
+        /* image area removed to keep project cards compact */
+
+        .project-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 0.75rem;
+        }
+
+        .project-tag {
+            background: #eef2ff;
+            color: var(--primary-color);
+            padding: 0.35rem 0.6rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            border: 1px solid #dbeafe;
+        }
+
+        .project-description {
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            word-break: break-all;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .social-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                margin-top: 80px;
+                min-height: auto;
+                padding: 3rem 1.5rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-bar {
+                justify-content: center;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-header {
+                flex-direction: column;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">SD.</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <h1>Sakshi Damani</h1>
+            <div class="title">Full Stack Developer</div>
+
+            <div class="contact-bar">
+                <a href="mailto:sakshidamani9@gmail.com" class="contact-item">
+                    <span>📧</span> sakshidamani9@gmail.com
+                </a>
+                <a href="tel:8777040119" class="contact-item">
+                    <span>📱</span> 8777040119
+                </a>
+                <span class="contact-item">
+                    <span>📍</span> Kolkata , West Bengal
+                </span>
+                <a href="https://www.linkedin.com/in/sakshi-damani-a94760260/" target="_blank" class="contact-item">
+                    <span>💼</span> LinkedIn
+                </a>
+            </div>
+
+            <div class="summary-box">
+                <p>Innovative Web Developer experienced in building responsive web applications with HTML, CSS,
+                    JavaScript, and SQL. Knowledgeable in Java, Spring Boot, and RESTful APIs, focused on leveraging
+                    full-stack development skills to create scalable applications. Committed to delivering user-friendly
+                    interfaces and efficient data handling.</p>
+            </div>
+
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="section-header">
+            <h2 class="section-title">Technical Skills</h2>
+        </div>
+
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>💻 Programming & Development</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">SQL Management</span>
+                    <span class="skill-tag">Web Development</span>
+                    <span class="skill-tag">OOPs Programming</span>
+                    <span class="skill-tag">Data Structures</span>
+                    <span class="skill-tag">Spring Boot</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                </div>
+            </div>
+
+            <div class="skill-category soft-skills">
+                <h3>🤝 Professional Skills</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag">Problem-Solving</span>
+                    <span class="skill-tag">Adaptability</span>
+                    <span class="skill-tag">Team Collaboration</span>
+                    <span class="skill-tag">Communication Skills</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="section-header">
+            <h2 class="section-title">Professional Experience</h2>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-title">Java Full Stack Developer</div>
+                        <div class="timeline-company">Eduskills Education</div>
+                    </div>
+                    <span class="timeline-date">April 2025 - June 2025</span>
+                </div>
+                <div class="timeline-content">
+                    <ul>
+                        <li>Developed a full-stack web application using Java, Spring Boot, HTML, CSS, and JavaScript,
+                            implementing RESTful APIs and database integration for dynamic data handling.</li>
+                        <li>Executed end-to-end development, encompassing frontend UI design, backend logic, and
+                            database management, while adhering to industry-standard coding practices and version
+                            control.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-title">Generative AI Developer</div>
+                        <div class="timeline-company">Google For Developers</div>
+                    </div>
+                    <span class="timeline-date">July 2024 - Sep 2024</span>
+                </div>
+                <div class="timeline-content">
+                    <ul>
+                        <li>Developed AI-driven solutions with machine learning models, utilizing Google AI tools,
+                            TensorFlow, and NLP to enhance application intelligence.</li>
+                        <li>Acquired expertise in LLMs and prompt engineering, advancing generative AI development
+                            through AI-powered automation.</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- Projects Section -->
+            <section id="projects">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Projects</h2>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Typing Shooter Game</h3>
+                            <span class="project-date">January 2026</span>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-description">
+                                An interactive typing game built in Java where enemies are eliminated by correctly
+                                typing words,
+                                enhancing typing speed through gamification. Features real-time input processing,
+                                scoring
+                                system, and dynamic difficulty levels using OOP concepts.
+                            </p>
+                            <div class="project-tags">
+                                <span class="project-tag">Java</span>
+                                <span class="project-tag">Game</span>
+                                <span class="project-tag">OOP</span>
+                            </div>
+                            <br>
+                            <a href="https://sakshidamanii.github.io/TypingShooterGame/" target="_blank"
+                                class="project-link">🚀 Live Demo →</a>
+
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Expenses Tracker</h3>
+                            <span class="project-date">Nov 2025 - Dec 2025</span>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-description">
+                                A responsive Expense Tracker Web Application with features like expense management,
+                                budget
+                                tracking, and category-based filtering. Implements data visualization (pie charts &
+                                budget
+                                progress) using localStorage persistence.
+                            </p>
+                            <div class="project-tags">
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">JavaScript</span>
+                                <span class="project-tag">LocalStorage</span>
+                            </div>
+                            <br>
+                            <a href="https://sakshidamanii.github.io/Expenses_tracker/" target="_blank"
+                                class="project-link">🚀 Live Demo →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">E-commerce Site</h3>
+                            <span class="project-date">Live</span>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-description">
+                                A responsive e-commerce demo showcasing product listings, cart interactions, and
+                                checkout UI.
+                                Built with HTML, CSS and JavaScript and deployed via GitHub Pages.
+                            </p>
+                            <div class="project-tags">
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">CSS</span>
+                                <span class="project-tag">GitHub Pages</span>
+                            </div>
+                            <br>
+                            <a href="https://sakshidamanii.github.io/E-commerce_site/" target="_blank"
+                                class="project-link">🚀 Live Demo →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Blog Application</h3>
+                            <span class="project-date">Blogging Site</span>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-description">
+                                A simple blog layout and editor showcasing posts and responsive reading experience.
+                            </p>
+                            <div class="project-tags">
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">CSS</span>
+                                <span class="project-tag">JavaScript</span>
+                            </div>
+                            <br>
+                            <a href="../Blog%20Application/index.html" target="_blank" class="project-link">🚀 Live Demo
+                                →</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education">
+                <div class="section-header">
+                    <h2 class="section-title">Education</h2>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <div>
+                                <div class="timeline-title">Master's of Computer Application</div>
+                                <div class="timeline-company">SRM University</div>
+                            </div>
+                            <span class="timeline-date">July 2025 - Present</span>
+                        </div>
+                        <div class="timeline-content">
+                            <ul>
+                                <li>Major in Generative AI</li>
+                                <li>Advanced studies in AI/ML technologies and software architecture</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <div>
+                                <div class="timeline-title">Bachelor's of Computer Application</div>
+                                <div class="timeline-company">Techno India University</div>
+                            </div>
+                            <span class="timeline-date">June 2022 - July 2025</span>
+                        </div>
+                        <div class="timeline-content">
+                            <ul>
+                                <li>Major in Computer Application</li>
+                                <li>Foundation in programming, web development, and database management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer id="contact">
+                <div class="footer-content">
+                    <div class="social-links">
+                        <a href="mailto:sakshidamani9@gmail.com">Email</a>
+                        <a href="https://www.linkedin.com/in/sakshi-damani-a94760260/" target="_blank">LinkedIn</a>
+                        <a href="https://sakshidamanii.github.io" target="_blank">GitHub</a>
+                    </div>
+                    <p>&copy; 2026 Sakshi Damani. All rights reserved.</p>
+                    <p style="margin-top: 0.5rem; opacity: 0.8; font-size: 0.9rem;">Kolkata, West Bengal, India</p>
+                </div>
+            </footer>
+
+</body>
+
+</html>
