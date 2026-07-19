@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakshi Damani | Full Stack & GenAI Developer</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Sakshi Damani, an innovative Full Stack & Generative AI Developer. Specializing in Java, Spring Boot, Javascript, and AI-driven solutions.">
+    <meta name="keywords" content="Sakshi Damani, Full Stack Developer, Generative AI Developer, Java, Spring Boot, Kolkata, Web Developer, Portfolio">
+    <meta name="author" content="Sakshi Damani">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Theme Toggle and Top Utilities -->
+    <div class="theme-switch-wrapper">
+        <button id="theme-toggle" aria-label="Toggle dark/light theme" class="theme-toggle-btn">
+            <i data-lucide="moon" class="theme-icon-dark"></i>
+            <i data-lucide="sun" class="theme-icon-light"></i>
+        </button>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-dot"></span>SD<span class="logo-accent">.</span>
+            </a>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+                <i data-lucide="menu" class="open-icon"></i>
+                <i data-lucide="x" class="close-icon"></i>
+            </button>
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#about" class="nav-link active">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="about">
+            <div class="hero-bg-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+            </div>
+            
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span> Available for Opportunities
+                    </div>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Sakshi Damani</span>
+                    </h1>
+                    <div class="hero-subtitle">Full Stack & Generative AI Developer</div>
+                    
+                    <div class="contact-bar">
+                        <a href="mailto:sakshidamani9@gmail.com" class="contact-item" title="Email Sakshi">
+                            <i data-lucide="mail"></i>
+                            <span>sakshidamani9@gmail.com</span>
+                        </a>
+                        <a href="tel:8777040119" class="contact-item" title="Call Sakshi">
+                            <i data-lucide="phone"></i>
+                            <span>8777040119</span>
+                        </a>
+                        <span class="contact-item">
+                            <i data-lucide="map-pin"></i>
+                            <span>Kolkata, WB, India</span>
+                        </span>
+                        <a href="https://www.linkedin.com/in/sakshi-damani-a94760260/" target="_blank" class="contact-item" rel="noopener noreferrer" title="LinkedIn Profile">
+                            <i data-lucide="linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                    
+                    <div class="summary-box">
+                        <p>Innovative Web Developer experienced in building responsive web applications with HTML, CSS, JavaScript, and SQL. Knowledgeable in Java, Spring Boot, and RESTful APIs, focused on leveraging full-stack development skills to create scalable applications. Committed to delivering user-friendly interfaces and efficient data handling.</p>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Contact Me</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="visual-card">
+                        <div class="card-header-decor">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="visual-content">
+                            <!-- We can display a custom abstract SVG graphic -->
+                            <svg viewBox="0 0 400 400" width="100%" height="100%" class="abstract-graphic" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.8"/>
+                                        <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.8"/>
+                                    </linearGradient>
+                                    <linearGradient id="grad2" x1="0%" y1="100%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="#ec4899" stop-opacity="0.7"/>
+                                        <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.7"/>
+                                    </linearGradient>
+                                    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                                        <feGaussianBlur stdDeviation="15" result="blur" />
+                                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                    </filter>
+                                </defs>
+                                <circle cx="200" cy="200" r="120" fill="url(#grad1)" filter="url(#glow)"/>
+                                <rect x="120" y="120" width="160" height="160" rx="30" fill="url(#grad2)" transform="rotate(45 200 200)" opacity="0.6"/>
+                                <g stroke="#ffffff" stroke-width="2" fill="none" opacity="0.3">
+                                    <circle cx="200" cy="200" r="160" stroke-dasharray="10 15" class="spin-circle"/>
+                                    <circle cx="200" cy="200" r="80" stroke-dasharray="5 5" class="spin-circle-reverse"/>
+                                </g>
+                                <g transform="translate(145, 175)" class="code-brackets" fill="#ffffff">
+                                    <text x="0" y="25" font-family="'Sora', sans-serif" font-size="28" font-weight="bold" opacity="0.95">&lt;SD /&gt;</text>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills section-padding" id="skills">
+            <div class="section-header">
+                <div class="subtitle">Capabilities</div>
+                <h2 class="section-title">Technical Expertise</h2>
+            </div>
+            
+            <div class="skills-container">
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i data-lucide="code-2" class="category-icon"></i>
+                        <h3>Programming & Development</h3>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <span class="skill-name">Java</span>
+                            <span class="skill-level">Intermediate</span>
+                        </div>
+                        <div class="skill-card">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-level">Intermediate</span>
+                        </div>
+                        <div class="skill-card">
+                            <span class="skill-name">Python</span>
+                            <span class="skill-level">Intermediate</span>
+                        </div>
+                        <div class="skill-card">
+                            <span class="skill-name">SQL Management</span>
+                            <span class="skill-level">Intermediate</span>
+                        </div>
+                        <div class="skill-card">
+                            <span class="skill-name">Web Development</span>
+                            <span class="skill-level">Intermediate</span>
+                        </div>
+                        <div class="skill-card">
+                            <span class="skill-name">OOPs Programming</span>
+                            <span class="skill-level">Intermediate</span>
+                        </div>
+                        <div class="skill-card">
+                            <span class="skill-name">Spring Boot</span>
+                            <span class="skill-level">Intermediate</span>
+                        </div>
+                        <div class="skill-card">
+                            <span class="skill-name">HTML/CSS</span>
+                            <span class="skill-level">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category soft-skills">
+                    <div class="category-header">
+                        <i data-lucide="users" class="category-icon"></i>
+                        <h3>Professional Skills</h3>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <span class="skill-name">Problem-Solving</span>
+                        </div>
+                        <div class="skill-card">
+                            <span class="skill-name">Adaptability</span>
+                        </div>
+                        <div class="skill-card">
+                            <span class="skill-name">Team Collaboration</span>
+                        </div>
+                        <div class="skill-card">
+                            <span class="skill-name">Communication Skills</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience section-padding" id="experience">
+            <div class="section-header">
+                <div class="subtitle">My Journey</div>
+                <h2 class="section-title">Professional Experience</h2>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-reveal="bottom">
+                    <div class="timeline-marker">
+                        <i data-lucide="briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-title">Java Full Stack Developer</h3>
+                                <div class="timeline-company">Eduskills Education</div>
+                            </div>
+                            <span class="timeline-date">April 2025 - June 2025</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Developed a full-stack web application using Java, Spring Boot, HTML, CSS, and JavaScript, implementing RESTful APIs and database integration for dynamic data handling.</li>
+                            <li>Executed end-to-end development, encompassing frontend UI design, backend logic, and database management, while adhering to industry-standard coding practices and version control.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-reveal="bottom">
+                    <div class="timeline-marker">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-title">Generative AI Developer</h3>
+                                <div class="timeline-company">Google For Developers</div>
+                            </div>
+                            <span class="timeline-date">July 2024 - Sep 2024</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Developed AI-driven solutions with machine learning models, utilizing Google AI tools, TensorFlow, and NLP to enhance application intelligence.</li>
+                            <li>Acquired expertise in LLMs and prompt engineering, advancing generative AI development through AI-powered automation.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects section-padding" id="projects">
+            <div class="section-header">
+                <div class="subtitle">Recent Works</div>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+            
+            <!-- Category Filter -->
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="java">Java</button>
+                <button class="filter-btn" data-filter="web">Web App</button>
+                <button class="filter-btn" data-filter="game">Games</button>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-categories="java game">
+                    <div class="project-header">
+                        <div class="project-header-top">
+                            <span class="project-date">January 2026</span>
+                            <div class="project-icon-wrapper">
+                                <i data-lucide="gamepad-2"></i>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Typing Shooter Game</h3>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            An interactive typing game built in Java where enemies are eliminated by correctly typing words, enhancing typing speed through gamification. Features real-time input processing, scoring system, and dynamic difficulty levels using OOP concepts.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Java</span>
+                            <span class="project-tag">Game</span>
+                            <span class="project-tag">OOP</span>
+                        </div>
+                        <a href="https://sakshidamanii.github.io/TypingShooterGame/" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <span>🚀 Live Demo</span>
+                            <i data-lucide="external-link"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-categories="web">
+                    <div class="project-header">
+                        <div class="project-header-top">
+                            <span class="project-date">Nov 2025 - Dec 2025</span>
+                            <div class="project-icon-wrapper">
+                                <i data-lucide="wallet"></i>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Expenses Tracker</h3>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            A responsive Expense Tracker Web Application with features like expense management, budget tracking, and category-based filtering. Implements data visualization (pie charts & budget progress) using localStorage persistence.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">LocalStorage</span>
+                        </div>
+                        <a href="https://sakshidamanii.github.io/Expenses_tracker/" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <span>🚀 Live Demo</span>
+                            <i data-lucide="external-link"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-categories="web">
+                    <div class="project-header">
+                        <div class="project-header-top">
+                            <span class="project-date">Live</span>
+                            <div class="project-icon-wrapper">
+                                <i data-lucide="shopping-bag"></i>
+                            </div>
+                        </div>
+                        <h3 class="project-title">E-commerce Site</h3>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            A responsive e-commerce demo showcasing product listings, cart interactions, and checkout UI. Built with HTML, CSS and JavaScript and deployed via GitHub Pages.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">GitHub Pages</span>
+                        </div>
+                        <a href="https://sakshidamanii.github.io/E-commerce_site/" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <span>🚀 Live Demo</span>
+                            <i data-lucide="external-link"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-categories="web">
+                    <div class="project-header">
+                        <div class="project-header-top">
+                            <span class="project-date">Blogging Site</span>
+                            <div class="project-icon-wrapper">
+                                <i data-lucide="pen-tool"></i>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Blog Application</h3>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            A simple blog layout and editor showcasing posts and responsive reading experience.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <a href="../Blog%20Application/index.html" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <span>🚀 Live Demo</span>
+                            <i data-lucide="external-link"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="education section-padding" id="education">
+            <div class="section-header">
+                <div class="subtitle">Academic background</div>
+                <h2 class="section-title">Education</h2>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-reveal="bottom">
+                    <div class="timeline-marker">
+                        <i data-lucide="graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-title">Master's of Computer Application</h3>
+                                <div class="timeline-company">SRM University</div>
+                            </div>
+                            <span class="timeline-date">July 2025 - Present</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Major in Generative AI</li>
+                            <li>Advanced studies in AI/ML technologies and software architecture</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-reveal="bottom">
+                    <div class="timeline-marker">
+                        <i data-lucide="graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-title">Bachelor's of Computer Application</h3>
+                                <div class="timeline-company">Techno India University</div>
+                            </div>
+                            <span class="timeline-date">June 2022 - July 2025</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Major in Computer Application</li>
+                            <li>Foundation in programming, web development, and database management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Contact Section -->
+        <section class="contact-section section-padding" id="contact">
+            <div class="section-header">
+                <div class="subtitle">Get In Touch</div>
+                <h2 class="section-title">Let's Connect</h2>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info-cards">
+                    <div class="info-card">
+                        <div class="info-icon"><i data-lucide="mail"></i></div>
+                        <div class="info-text">
+                            <h4>Email Me</h4>
+                            <a href="mailto:sakshidamani9@gmail.com">sakshidamani9@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i data-lucide="phone"></i></div>
+                        <div class="info-text">
+                            <h4>Call Me</h4>
+                            <a href="tel:8777040119">8777040119</a>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i data-lucide="map-pin"></i></div>
+                        <div class="info-text">
+                            <h4>Location</h4>
+                            <span>Kolkata, West Bengal, India</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="form-name">Name</label>
+                                <input type="text" id="form-name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email">Email</label>
+                                <input type="email" id="form-email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-subject">Subject</label>
+                            <input type="text" id="form-subject" placeholder="Project Inquiry" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-message">Message</label>
+                            <textarea id="form-message" rows="5" placeholder="Your message here..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <span>Send Message</span>
+                            <i data-lucide="send"></i>
+                        </button>
+                        <div id="form-feedback" class="form-feedback"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">SD<span class="logo-accent">.</span></div>
+            <div class="footer-socials">
+                <a href="mailto:sakshidamani9@gmail.com" title="Email"><i data-lucide="mail"></i></a>
+                <a href="https://www.linkedin.com/in/sakshi-damani-a94760260/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i data-lucide="linkedin"></i></a>
+                <a href="https://sakshidamanii.github.io" target="_blank" rel="noopener noreferrer" title="GitHub"><i data-lucide="github"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 Sakshi Damani. All rights reserved.</p>
+            <p class="footer-location">Kolkata, West Bengal, India</p>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
